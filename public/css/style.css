@@ -1,0 +1,16 @@
+
+.all-camps {
+    margin: 80px 0 80px;
+}
+
+
+.alert {
+    text-align: center;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    width: 500px
+}
+
+.btn-close {
+    font-size: 0.7rem;
+}

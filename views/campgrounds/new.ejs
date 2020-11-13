@@ -1,0 +1,43 @@
+<% layout("layouts/boilerplate.ejs") %>
+
+   <div class="row">
+       <h1 class="text-center">New campground</h1>
+       <div class="col-6 offset-3" >
+        <form action="/campgrounds" method="post"  class="validated-form" novalidate>
+            <div class="mb-3">
+                <label class="form-label" for="">Title</label>
+                <input class="form-control" type="text"  name="campground[title]" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="">location</label>
+                <input class="form-control"  type="text"  name="campground[location]" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="">Image url</label>
+                <input class="form-control"  type="text"  name="campground[image]" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="">Campground Price</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">$</span>
+                    <input name="campground[price]" type="text" class="form-control" placeholder="0.00" aria-label="price" aria-describedby="price-label" required>
+                </div>
+                <div class="mb-3">
+            </div>
+                <label class="form-label" for="" required>Description</label>
+                <textarea class="form-control"  type="text"  name="campground[description]" required> </textarea>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Add new campground</button>
+            </form>
+
+            </div>
+           
+        <a href="/campgrounds"> All Campgrounds</a>
+       </div>
+   </div>
+
+
+   
+
+
