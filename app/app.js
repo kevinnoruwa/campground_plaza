@@ -18,13 +18,14 @@ const MongoStore = require('connect-mongo')(session);
 
 // env
 require('dotenv').config()
-const dbUrl = process.env.DB_URL
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/camp_website'
+const secret = process.env.SECRET || 'thisissecret'
 
 
 const store = new MongoStore ({
   url: dbUrl ,
   touchAfter: 24 * 60 * 60,
-  secret: "thisissecret"
+  secret
 })
 
 store.on("eroor", (e) => {
