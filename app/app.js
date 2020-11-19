@@ -22,7 +22,7 @@ const dbUrl = process.env.DB_URL
 
 
 const store = new MongoStore ({
-  url:'mongodb://localhost:27017/camp_website',
+  url: dbUrl ,
   touchAfter: 24 * 60 * 60,
   secret: "thisissecret"
 })
@@ -88,7 +88,7 @@ app.use("/", Routes)
 
 
 mongoose.connect( 
-  'mongodb://localhost:27017/camp_website', {
+  dbUrl, {
   useUnifiedTopology: true,
   useFindAndModify: false,
   useNewUrlParser: true,
