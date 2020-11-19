@@ -1,4 +1,11 @@
 
+
+.container {
+    position: relative;
+    
+    top: -140px;
+    
+}
 .all-camps {
     margin: 20px 0 80px;
     max-width: 1200px;
@@ -42,6 +49,139 @@
     background: red
 }
 
+body {
+    position: relative;
+    z-index: 0;
+}
+
+/* nav */
+.camp-navbar  {
+    background: steelblue;
+    padding: 18px 0;
+ 
+
+}
+.camp-navbar .inside {
+    padding : 0 15px;
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    overflow: hidden;
+    
+
+}
+
+
+.camp-navbar a {
+    color:rgba(255,255,255,.57);
+    transition: all ease-in-out .3s ;
+    display: inline-block;
+
+   
+
+}
+
+
+.camp-navbar a:hover {
+  color: white
+   
+
+}
+
+
+
+.navbar-brand {
+    color: white !important;
+    font-size: 1.25rem;
+    transition: all .1s ease-in-out;
+}
+
+.navbar-brand.active {
+  color: steelblue !important
+}
+
+
+.m-navigation  {
+    font-weight: 500;
+    justify-self: center;
+}
+
+.currentUser  {
+    justify-self: end ;
+    font-weight: 500;
+   
+}
+
+.mobil {
+  
+    width: 100vw;
+    display: none;
+}
+.menu-icon {
+   position: absolute;
+   right: 0;
+   padding: 15px;
+   top: 8px;
+   cursor: pointer;
+   
+    
+ 
+}
+
+
+.menu-icon i {
+    font-size: 2rem;
+    color: rgba(255,255,255,0.57);  
+}
+
+
+.mobil-nav-1 {
+    position: relative;
+    top: -13px;
+    padding: 10px 0 40px;
+    transform: translate3d(0,-288px, 0);
+    background: steelblue;
+    transition: all .5s ease-in-out;
+    z-index: 10;
+    
+
+}
+.mobil-nav-1.active {
+    transform: translate3d(0,0, 0);
+}
+
+
+.mobil-nav-1 a {
+    display: block;
+    padding: 8px; 
+    color: rgba(255,255,255,0.57); 
+    transition: all .3s ease-in-out; 
+   
+}
+
+
+.mobil-nav-1 a:hover {
+    color: white
+   
+       
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .m-navigation  {
+        display: none;
+    }
+    
+    .currentUser  {
+        display: none;
+       
+    }
+    .mobil {
+        
+        display: block;
+    }
+   
+
+}
 
 
 
@@ -75,5 +215,9 @@
     .alert {
         width: 250px
     }
+
+    
+    
+    
 
 }

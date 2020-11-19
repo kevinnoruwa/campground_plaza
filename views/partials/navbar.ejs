@@ -1,5 +1,5 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
+<!-- <nav class="navbar">
+    <div class="inside">
       <a class="navbar-brand" href="/">Camp Plaza</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -11,14 +11,53 @@
           <a class="nav-link" href="/campgrounds/new">Add Campground</a>
         </div>
         <div class="navbar-nav ml-auto">
-          <% if(!currentUser) { %>
+         
+         
+        </div>
+      </div>
+    </div>
+  </nav> -->
+
+
+  <nav class="camp-navbar">
+    <div class="inside">
+      <div>
+        <a class="navbar-brand" href="/">Camp Plaza</a>
+      </div>
+      <div class="m-navigation">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/campgrounds">Campgrounds</a>
+          <a class="nav-link" href="/campgrounds/new">Add Campground</a>
+      </div>
+      <div class="currentUser">
+        <% if(!currentUser) { %>
           <a class="nav-link" href="/login"> Login</a>
           <a class="nav-link" href="/register">Register</a>
           <% } else { %>
             <a class="nav-link" href="/logout">Logout</a>
          <% } %>
-         
+      </div>
+      <div class="mobil">
+        <div class="menu-icon">
+          <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
       </div>
-    </div>
+      </div>
   </nav>
+  <div class="mobil-nav-1">
+    <div class="inside-mobil">
+      <div class="mobil-navigation">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/campgrounds">Campgrounds</a>
+        <a class="nav-link" href="/campgrounds/new">Add Campground</a>
+    </div>
+    <div class="mobil-user">
+      <% if(!currentUser) { %>
+        <a class="nav-link" href="/login"> Login</a>
+        <a class="nav-link" href="/register">Register</a>
+        <% } else { %>
+        <a class="nav-link" href="/logout">Logout</a>
+       <% } %>
+    </div>   
+</div>
+</div>
