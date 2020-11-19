@@ -1,5 +1,5 @@
 <% layout("layouts/boilerplate.ejs") %>
-
+<link rel="stylesheet" href="/css/stars.css">
 
 
 
@@ -14,6 +14,7 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item text-muted"><%=campground.location%></li>
+        <li class="list-group-item text-muted">Submited by <%=campground.author.username%></li>
         <li class="list-group-item">$<%=campground.price%>/night</li>
       </ul>
       <div class="card-body">
@@ -21,7 +22,6 @@
         <form class="d-inline" action="/campgrounds/<%=campground._id%>?_method=delete" method="post">
           <button class="btn btn-danger">delete</button>
         </form>
-        
       </div>
       <div class="card-footer text-muted">
         2 days ago
@@ -31,6 +31,7 @@
    
   </div>
   <div class="col-6">
+    <div id='map' style='width: 400px; height: 300px;'></div>
     <h2>Leave a review</h2>
     <form action="/campgrounds/<%=campground._id%>/reviews"  method="POST" class="mb-3 validated-form" novalidate>
       <div class="mb-3">
@@ -46,7 +47,10 @@
     <%for(let review of campground.reviews){ %>
       <div class="card mb-3">
         <div class="card-body">
-          <h5 class="card-title">Rating: <%=review.rating%></h5>
+          <div class="card-title">
+            <h5>Rating:</h5>  
+            <p class="starability-result" data-rating="<%=review.rating%>"></p>
+          </div>
           <p class="card-text">Review: <%=review.body%></p>
           <form action="/campgrounds/<%=campground._id%>/reviews/<%=review._id%>?_method=delete" method="POST">
             <button class="btn btn-sm btn-danger">delete</button>
@@ -61,25 +65,13 @@
 </div>
 
   
-
-
 <script>
-  (function () {
-  'use strict'
-  const forms = document.querySelectorAll('.validated-form')
-  Array.from(forms)
-      .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-          }
-
-          form.classList.add('was-validated')
-      }, false)
-      })
-  })()
+ const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+const campground = <%- JSON.stringify(campground) %>
 </script>
+<script src="/js/showPageMap.js"></script>
 
 
- 
+
+
+

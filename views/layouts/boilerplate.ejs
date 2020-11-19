@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="/css/style.css">
-    <title>yelp</title>
+    <title>Campground Plaza</title>
 </head>
 <body class="d-flex flex-column vh-100">
     <%-include("../partials/navbar.ejs") %>
     <div class="container">
         <%-include('../partials/flash.ejs') %>
         <%-body %>
-
     </div>
     <%-include("../partials/footer.ejs") %>
     <script src="/js/validate.js"></script>

@@ -1,16 +1,79 @@
 
 .all-camps {
-    margin: 80px 0 80px;
+    margin: 20px 0 80px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 
 .alert {
-    text-align: center;
     padding-bottom: 30px;
+    text-align: center;
     margin: 0 auto;
     width: 500px
 }
 
 .btn-close {
     font-size: 0.7rem;
+}
+
+
+.bg-dark {
+    background: steelblue !important
+}
+
+.display-4 {
+    font-weight: 400;
+}
+
+.cover-container {
+    max-width: 60vw ;
+}
+
+
+.home-body {
+  
+    height: 100vh;
+    position: relative;
+
+}
+
+.bg-home {
+    background: red
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+     canvas {
+         display: none 
+
+    }
+
+    .mapboxgl-map {
+        display: none;
+    }
+
+    .starability-result {
+        position: relative;
+        left: -16px
+
+    }
+
+    a.btn.btn-info.card-link {
+        display: block;
+        margin: 0 0 8px;
+        width: 100%;
+
+    }
+
+    button.btn.btn-danger {
+        width: 100%
+    }
+
+    .alert {
+        width: 250px
+    }
+
 }
